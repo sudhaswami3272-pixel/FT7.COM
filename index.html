@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Basic SEO Meta Tags -->
+    <title>FT7.GAME - FT7.COM Competition Games Soft | Download FT7 Game App</title>
+    <meta name="description" content="FT7.COM is the ultimate platform for online competition games. Play on FT7 GAME app, win exciting rewards, and experience real-time gaming soft action. Download FT7 Game now!">
+    <meta name="keywords" content="FT7.COM, FT7 GAME, FT7 Game App Download, Competition Games Soft, FT7 APK, FT7 Gaming Platform">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://ft7.game/">
+
+    <!-- Open Graph Tags (WhatsApp, Facebook Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ft7.game/">
+    <meta property="og:title" content="FT7.GAME - FT7.COM Competition Games Soft | Download FT7 Game App">
+    <meta property="og:description" content="Play competition games on the FT7 GAME app. Win exciting rewards, enjoy seamless gameplay, and join the action on FT7.COM.">
+    <meta property="og:image" content="https://ft7.game/FT7.COM.png">
+    <meta property="og:site_name" content="FT7.GAME">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ft7.game/">
+    <meta name="twitter:title" content="FT7.GAME - FT7.COM Competition Games Soft">
+    <meta name="twitter:description" content="Download FT7 Game App from FT7.COM. Play competition games and win exciting prizes!">
+    <meta name="twitter:image" content="https://ft7.game/FT7.COM.png">
+
+    <!-- Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://ft7.game/#website",
+          "url": "https://ft7.game/",
+          "name": "FT7.GAME",
+          "description": "FT7.COM Competition Games Soft Platform",
+          "inLanguage": "hi"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://ft7.game/#application",
+          "name": "FT7 GAME",
+          "operatingSystem": "ANDROID",
+          "applicationCategory": "GameApplication",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "12500"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            
+            /* PAGE TRANSITION ANIMATION */
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        }
+
+        /* Class added via JS on page load */
+        body.page-loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Class added via JS when exiting page */
+        body.page-exit {
+            opacity: 0;
+            transform: translateY(-15px);
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        }
+
+        /* PAGE LOADER OVERLAY */
+        .page-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0b0c10;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .page-overlay.hidden {
+            opacity: 0;
+        }
+
+        .loader-spinner {
+            width: 45px;
+            height: 45px;
+            border: 4px solid rgba(255, 0, 64, 0.2);
+            border-top: 4px solid #ff0040;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ==================== HEADER SECTION ==================== */
+        .site-header {
+            width: 100%;
+            background-color: rgba(18, 20, 26, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #2a2d3d;
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            height: 65px;
+        }
+
+        /* Header Logo Area */
+        .logo-area {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            color: #ff0040;
+            font-size: 28px;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(255, 0, 64, 0.5);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-title {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .brand-subtitle {
+            color: #a0a5b5;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Desktop Nav Links */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0040, #ff4d00);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        /* Header Download Button */
+        .download-btn {
+            position: relative;
+            background: linear-gradient(135deg, #ff0040 0%, #ff4d00 50%, #d60035 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 7px 16px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            overflow: hidden;
+            z-index: 1;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px rgba(255, 0, 64, 0.6);
+            transition: all 0.3s ease;
+            animation: glowPulse 2s infinite alternate;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transform: skewX(-25deg);
+            animation: shineSweep 3s infinite;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(255, 0, 64, 0.8);
+        }
+
+        .download-btn .btn-icon {
+            font-size: 18px;
+            animation: gamepadShake 2.5s infinite ease-in-out;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .btn-text small {
+            font-size: 8px;
+            letter-spacing: 1px;
+            color: #ffe6eb;
+            font-weight: 800;
+        }
+
+        .btn-text span {
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        /* Hamburger Button & Drawer */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 60px);
+            background-color: #12141a;
+            transition: left 0.3s ease-in-out;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .mobile-drawer.open { left: 0; }
+
+        .mobile-nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: #1a1d26;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* ==================== MAIN HERO BANNER ==================== */
+        .main-content {
+            flex: 1;
+        }
+
+        .hero-banner {
+            max-width: 1300px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        .banner-card {
+            position: relative;
+            width: 100%;
+            min-height: 420px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #2a2d3d;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+            overflow: hidden;
+        }
+
+        .banner-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(11, 12, 16, 0.85) 0%, rgba(255, 0, 64, 0.4) 50%, rgba(11, 12, 16, 0.9) 100%);
+            z-index: 2;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .banner-content h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 0 0 12px rgba(255,0,64,0.8);
+            margin-bottom: 8px;
+        }
+
+        .banner-content p {
+            color: #ffcc00;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* HERO BANNER LOGO WITH ROUND CORNERS */
+        .hero-logo-img {
+            height: 120px;
+            width: auto;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 20px; 
+            border: 2px solid rgba(255, 0, 64, 0.6);
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.8);
+            animation: logoPulse 3s infinite ease-in-out;
+        }
+
+        /* Main Download Call To Action */
+        .cta-download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ff0040, #ff4d00);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 800;
+            font-size: 16px;
+            box-shadow: 0 0 20px rgba(255, 0, 64, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .cta-download-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* ==================== SEO ARTICLE SECTION ==================== */
+        .seo-article-section {
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .article-container {
+            background-color: #12141a;
+            border: 1px solid #2a2d3d;
+            border-radius: 16px;
+            padding: 30px;
+            line-height: 1.8;
+            color: #c9cedd;
+        }
+
+        .article-container h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff0040;
+            padding-left: 12px;
+        }
+
+        .article-container h3 {
+            color: #ffcc00;
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+        }
+
+        .article-container p {
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+        }
+
+        .article-container ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-container li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-keyword {
+            color: #ff0040;
+            font-weight: 700;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .site-footer {
+            background: #12141c;
+            border-top: 1px solid #282c3c;
+            padding: 30px 15px 15px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #a0a5b5;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff0040;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #6c7280;
+            border-top: 1px solid #1a1d28;
+            padding-top: 15px;
+            width: 100%;
+        }
+
+        /* ==================== ANIMATIONS KEYFRAMES ==================== */
+        @keyframes shineSweep {
+            0% { left: -100%; }
+            20%, 100% { left: 200%; }
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 10px rgba(255, 0, 64, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(255, 0, 64, 0.9); }
+        }
+
+        @keyframes gamepadShake {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(-12deg); }
+            20% { transform: rotate(12deg); }
+            30% { transform: rotate(-8deg); }
+            40% { transform: rotate(8deg); }
+            50%, 90% { transform: rotate(0deg); }
+        }
+
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 0, 64, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 0, 64, 1); }
+        }
+
+        /* ==================== RESPONSIVE RULES ==================== */
+        @media (max-width: 900px) {
+            .desktop-nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .banner-card { min-height: 280px; padding: 20px; }
+            .banner-content h1 { font-size: 1.4rem; }
+            .banner-content p { font-size: 0.9rem; margin-bottom: 15px; }
+            .hero-logo-img { height: 80px; border-radius: 14px; margin-bottom: 12px; }
+            .cta-download-btn { padding: 10px 20px; font-size: 13px; }
+            .download-btn { animation: mobileAutoBounce 1.5s infinite ease-in-out !important; }
+            .article-container { padding: 20px; }
+            .article-container h2 { font-size: 1.4rem; }
+        }
+
+        .download-btn:active {
+            transform: scale(0.92) translateY(2px) !important;
+        }
+
+        @keyframes mobileAutoBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.03); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE TRANSITION LOADER OVERLAY -->
+    <div class="page-overlay" id="pageOverlay">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Header Logo Area -->
+            <a href="index.html" class="logo-area transition-link">
+                <div class="logo-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="logo-text">
+                    <span class="brand-title">FT7.GAME</span>
+                    <span class="brand-subtitle">COMPETITION GAMES SOFT</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <ul class="desktop-nav">
+                <li><a href="index.html" class="nav-link active transition-link">HOME</a></li>
+                <li><a href="brand.html" class="nav-link">BRAND</a></li>
+                <li><a href="games.html" class="nav-link">GAMES</a></li>
+                <li><a href="earn.html" class="nav-link">EARN</a></li>
+                
+            </ul>
+
+            <!-- Download Button in Header -->
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <a href="https://invite.ft7club.com/?code=0EI31XS" class="download-btn">
+                    <div class="btn-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="btn-text">
+                        <small>DOWNLOAD</small>
+                        <span>FT7.GAME APP</span>
+                    </div>
+                </a>
+
+                <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+<div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-nav-link active transition-link">HOME <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="brand.html" class="mobile-nav-link transition-link">BRAND <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="games.html" class="mobile-nav-link transition-link">GAMES <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="earn.html" class="mobile-nav-link transition-link">EARN <i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="banner-card">
+                <!-- Casino Background Image & Overlay -->
+                <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=1600&auto=format&fit=crop" class="banner-bg-img" alt="Casino Background">
+                <div class="banner-overlay"></div>
+
+                <div class="banner-content">
+                    <h1>WELCOME TO FT7.GAME</h1>
+                    <p>⚡ PLAY COMPETITION GAMES & WIN EXCITING REWARDS</p>
+                    
+                    <!-- ROUNDED CORNERS LOGO IMAGE -->
+                    <img src="FT7.COM.png" alt="FT7.COM Logo" class="hero-logo-img">
+                    
+                    <!-- HERO DOWNLOAD BUTTON -->
+                    <a href="https://invite.ft7club.com/?code=0EI31XS" class="cta-download-btn">
+                        <i class="fa-solid fa-download"></i> DOWNLOAD APP NOW
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Article Section -->
+        <section class="seo-article-section">
+            <article class="article-container">
+                <h2>FT7.COM - The Premier Platform for FT7 Game Competitions</h2>
+                <p>
+                    Welcome to <span class="highlight-keyword">FT7.COM</span>, the ultimate destination for enthusiasts seeking high-octane gaming soft action. The official <span class="highlight-keyword">FT7 GAME</span> app offers an unmatched gaming experience with real-time competitions, smooth mechanics, and rewarding challenges designed for all skill levels.
+                </p>
+
+                <h3>Why Download the FT7 Game App?</h3>
+                <p>
+                    Whether you are an avid mobile gamer or a casual player looking to pass the time, <span class="highlight-keyword">FT7 GAME</span> brings together a suite of competitive games right to your device. Here is why thousands of players choose <span class="highlight-keyword">FT7.COM</span>:
+                </p>
+                <ul>
+                    <li><strong>Smooth Performance:</strong> Optimized software ensures zero lag during intense gameplay.</li>
+                    <li><strong>Instant Rewards:</strong> Participate in competitive matches and unlock real, exciting prize opportunities.</li>
+                    <li><strong>Secure & Trusted:</strong> Designed with security in mind, providing a safe environment for all games on <span class="highlight-keyword">FT7.COM</span>.</li>
+                    <li><strong>Regular Updates:</strong> Constant feature updates keep the competition fresh and engaging.</li>
+                </ul>
+
+                <h3>How to Get Started with FT7 GAME</h3>
+                <p>
+                    Getting started on <span class="highlight-keyword">FT7.COM</span> is quick and straightforward. Follow these quick steps:
+                </p>
+                <ol style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Click the <strong>Download App</strong> button above to download the latest APK directly from <span class="highlight-keyword">FT7.COM</span>.</li>
+                    <li>Install the official <span class="highlight-keyword">FT7 GAME</span> software on your mobile device.</li>
+                    <li>Create your account, pick your favorite competition game, and start climbing the leaderboards!</li>
+                </ol>
+
+                <p>
+                    Join the thousands of players actively competing on <span class="highlight-keyword">FT7 GAME</span> today and experience gaming entertainment at its finest!
+                </p>
+                
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">FT7.GAME</div>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html" class="transition-link">Privacy Policy</a></li>
+                <li><a href="terms.html" class="transition-link">Terms & Conditions</a></li>
+                <li><a href="responsible-gaming.html" class="transition-link">Responsible Gaming</a></li>
+                <li><a href="support.html" class="transition-link">Support 24/7</a></li>
+            </ul>
+            <div class="copyright">
+                © 2026 FT7.GAME - COMPETITION GAMES SOFT. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Page Transitions -->
+    <script>
+        // Page Load Transition Animation
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+            setTimeout(() => {
+                document.getElementById('pageOverlay').classList.add('hidden');
+            }, 200);
+        });
+
+        // Smooth Page Transition Handler for Subpages
+        document.querySelectorAll('a.transition-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetUrl = this.getAttribute('href');
+                if (targetUrl && targetUrl !== '#' && !targetUrl.startsWith('javascript:')) {
+                    e.preventDefault();
+                    document.body.classList.remove('page-loaded');
+                    document.body.classList.add('page-exit');
+                    document.getElementById('pageOverlay').classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                }
+            });
+        });
+
+        // Mobile Menu Drawer Logic
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const toggleIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+            if (mobileDrawer.classList.contains('open')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>

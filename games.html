@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>FT7.GAME - Play Top Online Competition Games | FT7.COM Gaming Soft</title>
+    <meta name="description" content="Explore the best online competition games on FT7.GAME. Play popular card games, casual skill games, slots, and multiplayer action on FT7.COM app to win exciting prizes!">
+    <meta name="keywords" content="FT7 Games, FT7.COM Games List, FT7 Game App, Competition Games Soft, Skill Games Online, FT7 APK Download, Real Money Games">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://ft7.game/games.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ft7.game/games.html">
+    <meta property="og:title" content="FT7.GAME - Top Competition Games & Gaming Soft Platforms">
+    <meta property="og:description" content="Play exciting skill games and online competitions on FT7.GAME. Download the FT7 GAME app and win big today!">
+    <meta property="og:image" content="https://ft7.game/FT7.COM.png">
+    <meta property="og:site_name" content="FT7.GAME">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ft7.game/games.html">
+    <meta name="twitter:title" content="FT7.GAME Competition Games List">
+    <meta name="twitter:description" content="Discover popular gaming soft titles on FT7.COM and win rewards!">
+    <meta name="twitter:image" content="https://ft7.game/FT7.COM.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ItemPage",
+          "@id": "https://ft7.game/games.html#itempage",
+          "url": "https://ft7.game/games.html",
+          "name": "FT7 Games Collection",
+          "description": "Collection of top skill and competition games available on FT7 GAME platform."
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://ft7.game/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Games",
+              "item": "https://ft7.game/games.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0c10;
+            color: #ffffff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            
+            opacity: 0;
+            transform: translateY(15px);
+            transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+        }
+
+        body.page-loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        body.page-exit {
+            opacity: 0;
+            transform: translateY(-15px);
+            transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+        }
+
+        .page-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0b0c10;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 0.4s ease;
+        }
+
+        .page-overlay.hidden {
+            opacity: 0;
+        }
+
+        .loader-spinner {
+            width: 45px;
+            height: 45px;
+            border: 4px solid rgba(255, 0, 64, 0.2);
+            border-top: 4px solid #ff0040;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* HEADER ANIMATED SECTION */
+        .site-header {
+            width: 100%;
+            background-color: rgba(18, 20, 26, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #2a2d3d;
+        }
+
+        .header-container {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            height: 65px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            color: #ff0040;
+            font-size: 28px;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(255, 0, 64, 0.5);
+        }
+
+        .brand-title {
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            line-height: 1;
+        }
+
+        .brand-subtitle {
+            color: #a0a5b5;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            margin-top: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff0040, #ff4d00);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+
+        .download-btn {
+            position: relative;
+            background: linear-gradient(135deg, #ff0040 0%, #ff4d00 50%, #d60035 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 7px 16px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            overflow: hidden;
+            z-index: 1;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 15px rgba(255, 0, 64, 0.6);
+            transition: all 0.3s ease;
+            animation: glowPulse 2s infinite alternate;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+            transform: skewX(-25deg);
+            animation: shineSweep 3s infinite;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 20px rgba(255, 0, 64, 0.8);
+        }
+
+        .download-btn .btn-icon {
+            font-size: 18px;
+            animation: gamepadShake 2.5s infinite ease-in-out;
+        }
+
+        .btn-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            text-align: left;
+            z-index: 2;
+        }
+
+        .btn-text small {
+            font-size: 8px;
+            letter-spacing: 1px;
+            color: #ffe6eb;
+            font-weight: 800;
+        }
+
+        .btn-text span {
+            font-size: 12px;
+            font-weight: 900;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 60px;
+            left: -100%;
+            width: 100%;
+            height: calc(100vh - 60px);
+            background-color: #12141a;
+            transition: left 0.3s ease-in-out;
+            padding: 25px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+
+        .mobile-drawer.open { left: 0; }
+
+        .mobile-nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: #1a1d26;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* GAMES PAGE GRID */
+        .main-content {
+            flex: 1;
+        }
+
+        .games-section {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h1 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-header p {
+            color: #ffcc00;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .game-card {
+            background: #12141a;
+            border: 1px solid #2a2d3d;
+            border-radius: 14px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff0040;
+            box-shadow: 0 8px 25px rgba(255, 0, 64, 0.4);
+        }
+
+        .game-icon-box {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 15px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255,0,64,0.2), rgba(255,77,0,0.1));
+            border: 1px solid rgba(255,0,64,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #ff0040;
+        }
+
+        .game-card h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .game-card p {
+            font-size: 13px;
+            color: #a0a5b5;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .play-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff0040, #ff4d00);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 800;
+            transition: transform 0.2s ease;
+        }
+
+        .play-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* SEO ARTICLE SECTION */
+        .seo-article-section {
+            max-width: 1300px;
+            margin: 40px auto;
+            padding: 0 15px;
+        }
+
+        .article-container {
+            background-color: #12141a;
+            border: 1px solid #2a2d3d;
+            border-radius: 16px;
+            padding: 30px;
+            line-height: 1.8;
+            color: #c9cedd;
+        }
+
+        .article-container h2 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff0040;
+            padding-left: 12px;
+        }
+
+        .article-container h3 {
+            color: #ffcc00;
+            font-size: 1.3rem;
+            margin: 20px 0 10px;
+        }
+
+        .article-container p {
+            margin-bottom: 15px;
+            font-size: 0.98rem;
+        }
+
+        .article-container ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-container li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-keyword {
+            color: #ff0040;
+            font-weight: 700;
+        }
+
+        /* ANIMATIONS KEYFRAMES */
+        @keyframes shineSweep {
+            0% { left: -100%; }
+            20%, 100% { left: 200%; }
+        }
+
+        @keyframes glowPulse {
+            0% { box-shadow: 0 0 10px rgba(255, 0, 64, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(255, 0, 64, 0.9); }
+        }
+
+        @keyframes gamepadShake {
+            0%, 100% { transform: rotate(0deg); }
+            10% { transform: rotate(-12deg); }
+            20% { transform: rotate(12deg); }
+            30% { transform: rotate(-8deg); }
+            40% { transform: rotate(8deg); }
+            50%, 90% { transform: rotate(0deg); }
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #12141c;
+            border-top: 1px solid #282c3c;
+            padding: 30px 15px 15px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #a0a5b5;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff0040;
+        }
+
+        .copyright {
+            font-size: 11px;
+            color: #6c7280;
+            border-top: 1px solid #1a1d28;
+            padding-top: 15px;
+            width: 100%;
+        }
+
+        @media (max-width: 900px) {
+            .desktop-nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .download-btn { animation: mobileAutoBounce 1.5s infinite ease-in-out !important; }
+        }
+
+        @keyframes mobileAutoBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-4px) scale(1.03); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-overlay" id="pageOverlay">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo-area transition-link">
+                <div class="logo-icon"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="logo-text">
+                    <span class="brand-title">FT7.GAME</span>
+                    <span class="brand-subtitle">COMPETITION GAMES SOFT</span>
+                </div>
+            </a>
+
+            <ul class="desktop-nav">
+                <li><a href="index.html" class="nav-link transition-link">HOME</a></li>
+                <li><a href="brand.html" class="nav-link transition-link">BRAND</a></li>
+                <li><a href="games.html" class="nav-link active transition-link">GAMES</a></li>
+                <li><a href="support.html" class="nav-link transition-link">EARN</a></li>
+            </ul>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <a href="https://invite.ft7club.com/?code=0EI31XS" class="download-btn">
+                    <div class="btn-icon"><i class="fa-solid fa-gamepad"></i></div>
+                    <div class="btn-text">
+                        <small>DOWNLOAD</small>
+                        <span>FT7.GAME APP</span>
+                    </div>
+                </a>
+
+                <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+<div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="mobile-nav-link transition-link">HOME <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="brand.html" class="mobile-nav-link transition-link">BRAND <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="games.html" class="mobile-nav-link active transition-link">GAMES <i class="fa-solid fa-chevron-right"></i></a>
+    <a href="earn.html" class="mobile-nav-link transition-link">EARN <i class="fa-solid fa-chevron-right"></i></a>
+</div>
+
+    <main class="main-content">
+        <section class="games-section">
+            <div class="section-header">
+                <h1>COMPETITION GAMES SOFT</h1>
+                <p>⚡ PLAY TOP RATED GAMES & WIN EXCITING REWARDS ON FT7.COM</p>
+            </div>
+
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-icon-box"><i class="fa-solid fa-dice"></i></div>
+                    <h3>Skill Board Games</h3>
+                    <p>Fast-paced competitive board games designed for real-time skill challenges.</p>
+                    <a href="#" class="play-btn">PLAY NOW</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon-box"><i class="fa-solid fa-trophy"></i></div>
+                    <h3>Esports Tournaments</h3>
+                    <p>Compete in high-stakes multiplayer esports matches with fair play matching.</p>
+                    <a href="https://invite.ft7club.com/?code=0EI31XS" class="play-btn">PLAY NOW</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon-box"><i class="fa-solid fa-chess"></i></div>
+                    <h3>Tactical Strategy</h3>
+                    <p>Test your brain power and strategy against online competitors nationwide.</p>
+                    <a href="https://invite.ft7club.com/?code=0E31XS" class="play-btn">PLAY NOW</a>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-icon-box"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Action Arcade</h3>
+                    <p>High-speed arcade gaming soft titles with instant leaderboards and rewards.</p>
+                    <a href="https://invite.ft7club.com/?code=0EI31XS" class="play-btn">PLAY NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seo-article-section">
+            <article class="article-container">
+                <h2>Explore Top Online Competition Games on FT7.GAME</h2>
+                <p>
+                    Welcome to the official Games portal on <span class="highlight-keyword">FT7.GAME</span>. As a premier destination for online <span class="highlight-keyword">Competition Games Soft</span>, <span class="highlight-keyword">FT7.COM</span> offers a diverse lineup of high-quality skill games engineered for seamless performance and competitive play.
+                </p>
+
+                <h3>Why Choose FT7 GAME Software?</h3>
+                <p>
+                    Our platform brings cutting-edge gaming technology directly to your device. Here is why players across the globe trust <span class="highlight-keyword">FT7 GAME</span>:
+                </p>
+                <ul>
+                    <li><strong>Real-Time Matchmaking:</strong> Smart pairing algorithms connect you with players of similar skill levels instantly.</li>
+                    <li><strong>Lag-Free Gameplay:</strong> Optimized server nodes deliver zero-latency gaming action on both mobile and desktop.</li>
+                    <li><strong>Certified Fair Play:</strong> Advanced anti-cheat software guarantees 100% fair matches for every tournament.</li>
+                    <li><strong>Exciting Daily Rewards:</strong> Participate in seasonal events and climb global leaderboards to unlock prizes.</li>
+                </ul>
+
+                <h3>How to Download & Play Games on FT7.COM</h3>
+                <p>
+                    Getting started is fast and simple. Follow these steps to begin playing on <span class="highlight-keyword">FT7.COM</span>:
+                </p>
+                <ol style="margin-left: 20px; margin-bottom: 20px;">
+                    <li>Click the <strong>DOWNLOAD FT7.GAME APP</strong> button at the top header.</li>
+                    <li>Install the official APK file on your mobile smartphone.</li>
+                    <li>Register your free account, pick your favorite game mode, and start winning today!</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">FT7.GAME</div>
+            <ul class="footer-links">
+                <li><a href="privacy-policy.html" class="transition-link">Privacy Policy</a></li>
+                <li><a href="terms.html" class="transition-link">Terms & Conditions</a></li>
+                <li><a href="responsible-gaming.html" class="transition-link">Responsible Gaming</a></li>
+                <li><a href="support.html" class="transition-link">Support 24/7</a></li>
+            </ul>
+            <div class="copyright">
+                © 2026 FT7.GAME - COMPETITION GAMES SOFT. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('page-loaded');
+            setTimeout(() => {
+                document.getElementById('pageOverlay').classList.add('hidden');
+            }, 200);
+        });
+
+        document.querySelectorAll('a.transition-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetUrl = this.getAttribute('href');
+                if (targetUrl && targetUrl !== '#' && !targetUrl.startsWith('javascript:')) {
+                    e.preventDefault();
+                    document.body.classList.remove('page-loaded');
+                    document.body.classList.add('page-exit');
+                    document.getElementById('pageOverlay').classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 300);
+                }
+            });
+        });
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const toggleIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+            if (mobileDrawer.classList.contains('open')) {
+                toggleIcon.classList.remove('fa-bars');
+                toggleIcon.classList.add('fa-xmark');
+            } else {
+                toggleIcon.classList.remove('fa-xmark');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>I
